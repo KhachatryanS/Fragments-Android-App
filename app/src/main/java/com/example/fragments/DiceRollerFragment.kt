@@ -69,9 +69,9 @@ class DiceRollerFragment : Fragment() {
         super.onDetach()
         setFragmentResult(
                 MainActivity.MAIN_BUNDLE, bundleOf(
-                MainActivity.PLAYER_1 to binding.player1DiceRoller.text.toString(),           //նայ ասե՞մ ոնցաա ուղարկում էս պահը,,ինչ ուղարկել կայնի ջոգեմ վափշե ինչ անում
-                MainActivity.PLAYER_2 to binding.player2DiceRoller.text.toString()            //ոնցոր անունները գրումա սխմումա սբմիթ, մեյն ֆռագմենտի մեջ փոխվումա անունի
-            )                                                                           //տեղի գրածները, այսքն պետքա սաղ ֆռագմենտներում փոխվի բայց չի փոխվում
+                MainActivity.PLAYER_1 to binding.player1DiceRoller.text.toString(),
+                MainActivity.PLAYER_2 to binding.player2DiceRoller.text.toString()
+            )
         )
     }
 

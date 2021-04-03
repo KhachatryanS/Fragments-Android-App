@@ -42,9 +42,9 @@ class PlayerNameFragment : Fragment() {
     fun sendData(){
         setFragmentResult(
                 MainActivity.MAIN_BUNDLE, bundleOf(
-                MainActivity.PLAYER_1 to binding.player1name.text.toString(),           //նայ ասե՞մ ոնցաա ուղարկում էս պահը,,ինչ ուղարկել կայնի ջոգեմ վափշե ինչ անում
-                MainActivity.PLAYER_2 to binding.player2name.text.toString()            //ոնցոր անունները գրումա սխմումա սբմիթ, մեյն ֆռագմենտի մեջ փոխվումա անունի
-            )                                                                           //տեղի գրածները, այսքն պետքա սաղ ֆռագմենտներում փոխվի բայց չի փոխվում
+                MainActivity.PLAYER_1 to binding.player1name.text.toString(),
+                MainActivity.PLAYER_2 to binding.player2name.text.toString()
+            )
         )
     }
 

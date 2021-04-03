@@ -27,36 +27,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-        Log.d("MainActivity", "OnCreate")
-
-        val container:ConstraintLayout = findViewById(R.id.main)
+        
         supportFragmentManager
                 .beginTransaction()
                 .add(R.id.main, MainFragment())
                 .addToBackStack("main")
                 .commit()
 
-
-//        binding.ticTacToe.setOnClickListener {
-//            supportFragmentManager
-//                .beginTransaction()
-//                .replace(R.id.container, TicTacToeFragment())
-//                .addToBackStack("TicTacToe")
-//                .commit()
-//        }
-
-//        supportFragmentManager
-//            .beginTransaction()
-//            .replace(R.id.container, MainFragment())
-//            .commit()
-
-//        supportFragmentManager.setFragmentResultListener(NAMES, this,  FragmentResultListener { _, result ->
-//            binding.player1.text = result.getString(MainActivity.PLAYER_1)
-//            binding.player2.text = result.getString(MainActivity.PLAYER_2)
-//        })
-//        supportFragmentManager.setFragmentResult(NAMES, bundleOf( PLAYER_1 to binding.player1.text,
-//                                                                         PLAYER_2 to binding.player2.text))
     }
 }
