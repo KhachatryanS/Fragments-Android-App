@@ -1,7 +1,6 @@
 package com.example.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,27 +8,34 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
 import com.example.fragments.databinding.FragmentDiceRollerBinding
 
 
-class DiceRollerFragment : Fragment() {
+class DiceRollerFragment: Fragment(){
 
-    private val imagesList = listOf(R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four, R.drawable.five, R.drawable.six)
+    private val imagesList = listOf(
+            R.drawable.one,
+            R.drawable.two,
+            R.drawable.three,
+            R.drawable.four,
+            R.drawable.five,
+            R.drawable.six
+    )
     lateinit var binding: FragmentDiceRollerBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
+            inflater: LayoutInflater,
+            container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-
         val view = inflater.inflate(R.layout.fragment_dice_roller, container, false)
+
         binding = FragmentDiceRollerBinding.bind(view)
 
         val animation: Animation = AnimationUtils.loadAnimation(
@@ -74,6 +80,4 @@ class DiceRollerFragment : Fragment() {
             )
         )
     }
-
-
 }

@@ -1,11 +1,7 @@
 package com.example.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.os.bundleOf
-import androidx.fragment.app.FragmentResultListener
 import com.example.fragments.databinding.ActivityMainBinding
 
 
@@ -21,18 +17,10 @@ class MainActivity : AppCompatActivity() {
         var score2 = 0
 
     }
-    lateinit var binding:ActivityMainBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
-        supportFragmentManager
-                .beginTransaction()
-                .add(R.id.main, MainFragment())
-                .addToBackStack("main")
-                .commit()
-
     }
 }

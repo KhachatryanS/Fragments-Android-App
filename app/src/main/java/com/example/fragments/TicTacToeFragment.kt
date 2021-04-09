@@ -11,10 +11,10 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.setFragmentResultListener
-import com.example.fragments.databinding.FragmentTictactoeBinding
 import com.example.tictactoe.TicTacToe
 
-class TicTacToeFragment:Fragment() {
+
+class TicTacToeFragment: Fragment(){
 
     lateinit var board:List<Button>
     lateinit var playAgainButton: Button
@@ -22,20 +22,15 @@ class TicTacToeFragment:Fragment() {
     var player1 = "Player 1"
     var player2 = "Player 2"
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
-
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
-
         val view = inflater.inflate(R.layout.fragment_tictactoe, container, false)
 
         playAgainButton = view.findViewById(R.id.playAgain)
@@ -45,7 +40,6 @@ class TicTacToeFragment:Fragment() {
                 view.findViewById(R.id.three), view.findViewById(R.id.four), view.findViewById(R.id.five),
                 view.findViewById(R.id.six), view.findViewById(R.id.seven), view.findViewById(R.id.eight)
         )
-
 
         setFragmentResultListener(MainActivity.TIC_TAC_TOE){ _, bundle ->
             player1 = bundle.getString(MainActivity.PLAYER_1).toString()
@@ -103,6 +97,7 @@ class TicTacToeFragment:Fragment() {
         return view
     }
 
+
     override fun onDetach() {
         super.onDetach()
         setFragmentResult(
@@ -112,5 +107,4 @@ class TicTacToeFragment:Fragment() {
         )
         )
     }
-
 }
